@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { StatsCard } from "@/components/dashboard/StatsCard";
-import { ActivityLogger } from "@/components/dashboard/ActivityLogger";
+import { EnhancedActivityLogger } from "@/components/dashboard/EnhancedActivityLogger";
 import { BadgeSystem } from "@/components/dashboard/BadgeSystem";
 import { ImpactVisualizer } from "@/components/dashboard/ImpactVisualizer";
 import { GoalSetting } from "@/components/dashboard/GoalSetting";
+import { DataManagement } from "@/components/dashboard/DataManagement";
 import { EmissionChart } from "@/components/charts/EmissionChart";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -263,11 +264,12 @@ const Index = () => {
 
         {/* Main Content Tabs */}
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="log">Log Activity</TabsTrigger>
             <TabsTrigger value="goals">Goals</TabsTrigger>
             <TabsTrigger value="badges">Badges</TabsTrigger>
+            <TabsTrigger value="data">Data Export</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
@@ -280,10 +282,11 @@ const Index = () => {
           <TabsContent value="log" className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2">
-                <ActivityLogger />
+                <EnhancedActivityLogger userType={userType || "individual"} />
               </div>
-              <div>
+              <div className="space-y-6">
                 <ImpactVisualizer />
+                <DataManagement userType={userType || "individual"} />
               </div>
             </div>
           </TabsContent>
@@ -294,6 +297,10 @@ const Index = () => {
 
           <TabsContent value="badges" className="space-y-6">
             <BadgeSystem />
+          </TabsContent>
+
+          <TabsContent value="data" className="space-y-6">
+            <DataManagement userType={userType || "individual"} />
           </TabsContent>
         </Tabs>
       </main>
