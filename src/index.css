@@ -8,33 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Sustainable color palette with earth tones and greens */
+    --background: 120 20% 98%;
+    --foreground: 150 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Vibrant eco-green */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary: Soft sage green */
+    --secondary: 120 25% 85%;
+    --secondary-foreground: 150 15% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted: Light sage */
+    --muted: 120 15% 92%;
+    --muted-foreground: 150 8% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent: Fresh lime green */
+    --accent: 84 65% 59%;
+    --accent-foreground: 150 15% 15%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warning: Amber for emissions alerts */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Success: Deep forest green */
+    --success: 158 64% 52%;
+    --success-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 76% 36%;
+
+    /* Eco-specific design tokens */
+    --eco-gradient: linear-gradient(135deg, hsl(142 76% 36%), hsl(158 64% 52%));
+    --earth-gradient: linear-gradient(135deg, hsl(84 65% 59%), hsl(142 76% 36%));
+    --nature-shadow: 0 4px 20px hsl(142 76% 36% / 0.15);
+    --glow-green: 0 0 30px hsl(142 76% 36% / 0.3);
+    
+    /* Animation tokens */
+    --transition-eco: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-eco: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -56,33 +79,45 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with deep forest theme */
+    --background: 150 20% 8%;
+    --foreground: 120 25% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 15% 12%;
+    --card-foreground: 120 25% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 15% 12%;
+    --popover-foreground: 120 25% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 76% 45%;
+    --primary-foreground: 150 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 15% 20%;
+    --secondary-foreground: 120 25% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 150 10% 18%;
+    --muted-foreground: 120 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 84 65% 59%;
+    --accent-foreground: 150 20% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 150 20% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 158 64% 52%;
+    --success-foreground: 150 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 120 25% 95%;
+
+    --border: 150 10% 25%;
+    --input: 150 10% 25%;
+    --ring: 142 76% 45%;
+
+    --eco-gradient: linear-gradient(135deg, hsl(142 76% 45%), hsl(158 64% 52%));
+    --earth-gradient: linear-gradient(135deg, hsl(84 65% 59%), hsl(142 76% 45%));
+    --nature-shadow: 0 4px 20px hsl(142 76% 45% / 0.25);
+    --glow-green: 0 0 30px hsl(142 76% 45% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +136,74 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Eco-themed component classes */
+  .eco-gradient {
+    background: var(--eco-gradient);
+  }
+  
+  .earth-gradient {
+    background: var(--earth-gradient);
+  }
+  
+  .nature-shadow {
+    box-shadow: var(--nature-shadow);
+  }
+  
+  .glow-green {
+    box-shadow: var(--glow-green);
+  }
+  
+  .eco-transition {
+    transition: var(--transition-eco);
+  }
+  
+  .bounce-eco {
+    transition-timing-function: var(--bounce-eco);
+  }
+  
+  /* Badge animations */
+  .badge-unlock {
+    animation: badge-unlock 0.6s var(--bounce-eco);
+  }
+  
+  @keyframes badge-unlock {
+    0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+    50% { transform: scale(1.1) rotate(2deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  
+  /* Tree growing animation */
+  .tree-grow {
+    animation: tree-grow 1s ease-out;
+  }
+  
+  @keyframes tree-grow {
+    0% { transform: scaleY(0); transform-origin: bottom; }
+    100% { transform: scaleY(1); transform-origin: bottom; }
+  }
+  
+  /* Progress bar animation */
+  .progress-fill {
+    animation: progress-fill 1.5s ease-out;
+  }
+  
+  @keyframes progress-fill {
+    0% { width: 0%; }
+    100% { width: var(--progress-width, 0%); }
+  }
+  
+  /* Eco pulse effect */
+  .eco-pulse {
+    animation: eco-pulse 2s infinite;
+  }
+  
+  @keyframes eco-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4); }
+    50% { box-shadow: 0 0 0 20px hsl(var(--primary) / 0); }
   }
 }
